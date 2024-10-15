@@ -30,7 +30,7 @@
       <header id="header">header</header>
       <div class="slide">
         <!-- Slider main container -->
-        <div class="swiper">
+        <div class="swiper slide-intro">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -64,5 +64,32 @@
       <main id="container">content</main>
       <footer id="footer">footer</footer>
     </div>
+
+    <script>
+      var swiper = new Swiper(".slide-intro", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        // autoplay: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        // breakpoints: {
+        //   640: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 20,
+        //   },
+        //   768: {
+        //     slidesPerView: 4,
+        //     spaceBetween: 40,
+        //   },
+        //   1024: {
+        //     slidesPerView: 5,
+        //     spaceBetween: 50,
+        //   },
+        // },
+      });
+    </script>
   </body>
 </html>
