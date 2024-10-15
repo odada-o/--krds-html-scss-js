@@ -1,17 +1,63 @@
+$gray-300: #e0e0e0;
+$primay: #00ff00;
+
 #wrap {
   width: 1200px;
   margin: 0 auto;
-  background: lightgray;
+  background: $gray-300;
 }
 header {
   display: flex;
   justify-content: space-between;
   height: 100px;
+
+  h1 {
+    font-size: 24px;
+    color: $gray-300;
+
+    &:hover {
+      &::before {
+        background: lightcoral;
+      }
+      a {
+        color: $primay;
+      }
+    }
+
+    &::before {
+      content: '앞';
+    }
+
+    &::after {
+      content: '뒤';
+    }
+  }
+}
+
+header h1::before {
+  content: '앞';
 }
 
 #gnb {
+  // 자식만 선택하고 싶어
+  // #gnb > ul > li > a {}
+  > ul {
+    display: flex;
+    gap: 20px;
+    > li {
+      > a {
+        padding: 20px;
+        background: blue;
+      }
+    }
+  }
+
+  // 자손
   ul {
     display: flex;
     gap: 20px;
+  }
+  a {
+    padding: 20px;
   }
 }
