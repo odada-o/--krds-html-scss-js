@@ -38,4 +38,28 @@
       height: 50vh;
     }
   }
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+// tablet
+@media screen and (min-width: 600px) {
+  .slide-intro .swiper-slide img {
+    height: 70vh;
+  }
+}
+
+// desktop
+@media screen and (min-width: 1024px) {
+  .slide-intro .swiper-slide img {
+    height: 90vh;
+  }
+  .slide-intro .swiper-pagination {
+    display: block;
+  }
+  .slide-intro .swiper-button-next,
+  .slide-intro .swiper-button-prev {
+    display: none;
+  }
 }
