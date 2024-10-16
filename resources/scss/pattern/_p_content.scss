@@ -15,7 +15,7 @@
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: $white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,9 +67,10 @@
       // .text-area__tit
       &__tit {
         font-size: 3rem;
+        color: $gray-90;
       }
       &__cont {
-        color: #999;
+        color: $gray-70;
       }
       &__goto {
         display: inline-block;
@@ -120,5 +121,12 @@
   .slide-intro .swiper-button-next,
   .slide-intro .swiper-button-prev {
     display: none;
+  }
+}
+
+.slide-studio {
+  overflow: visible;
+  .swiper-pagination {
+    bottom: -50px;
   }
 }
