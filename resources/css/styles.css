@@ -3519,6 +3519,30 @@ input[type=checkbox] {
   height: 100%;
 }
 
+.slide-intro .swiper-slide {
+  position: relative;
+}
+.slide-intro .swiper-slide .text-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 400px;
+}
+.slide-intro .swiper-slide .text-area__tit {
+  font-size: 3rem;
+}
+.slide-intro .swiper-slide .text-area__cont {
+  color: #999;
+}
+.slide-intro .swiper-slide .text-area__goto {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 7px 20px;
+  background: #246beb;
+  color: #fff;
+}
 .slide-intro .swiper-slide img {
   height: 50vh;
 }
