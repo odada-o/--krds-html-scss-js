@@ -101,7 +101,18 @@
     height: 90vh;
   }
   .slide-intro .swiper-slide .text-area {
+    width: 100%;
+    max-width: none;
     text-align: left;
+  }
+  .slide-intro .swiper-slide .text-area__tit {
+    font-size: 6rem;
+  }
+  .slide-intro .swiper-slide .text-area__cont {
+    font-size: 2rem;
+  }
+  .slide-intro .swiper-slide .text-area__goto {
+    margin-top: 30px;
   }
   .slide-intro .swiper-pagination {
     display: block;
