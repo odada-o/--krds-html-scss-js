@@ -68,8 +68,7 @@
     }
     &::after {
       content: "\f061";
-      font-family: "Line Awesome Free";
-      font-weight: 900;
+      @include lineAwesome;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -107,13 +106,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: none;
   }
   #logo {
     a {
       display: block;
-      width: 296px;
-      height: 44px;
+      width: 200px;
+      height: 35px;
       background: url("../../../resources/images/pattern/common/head_logo.png") no-repeat 0 0 / contain;
     }
     span {
@@ -203,6 +201,44 @@
         font-weight: $font-bold;
         color: $gray-90;
       }
+    }
+  }
+}
+
+.util {
+  display: flex;
+  gap: 15px;
+  .lang {
+    &__btn {
+      position: relative;
+      height: 57px;
+      margin-right: 10px;
+      font-size: 2rem;
+      text-transform: uppercase;
+      &::after {
+        content: "\f107";
+        @include lineAwesome;
+        margin-left: 5px;
+        color: $gray-50;
+      }
+    }
+    &__lst {
+      display: none;
+    }
+  }
+  .search {
+    transform: scaleX(-1);
+    &::before {
+      content: "\f002";
+      @include lineAwesome;
+      font-size: 3.8rem;
+    }
+  }
+  .all-menu {
+    &::before {
+      content: "\f0c9";
+      @include lineAwesome;
+      font-size: 3.8rem;
     }
   }
 }

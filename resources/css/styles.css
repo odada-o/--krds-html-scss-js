@@ -3601,12 +3601,11 @@ input[type=checkbox] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: none;
 }
 #header #logo a {
   display: block;
-  width: 296px;
-  height: 44px;
+  width: 200px;
+  height: 35px;
   background: url("../../../resources/images/pattern/common/head_logo.png") no-repeat 0 0/contain;
 }
 #header #logo span {
@@ -3698,6 +3697,43 @@ input[type=checkbox] {
 .gnb__depth2 a:hover {
   font-weight: 700;
   color: #1d1d1d;
+}
+
+.util {
+  display: flex;
+  gap: 15px;
+}
+.util .lang__btn {
+  position: relative;
+  height: 57px;
+  margin-right: 10px;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.util .lang__btn::after {
+  content: "\f107";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  margin-left: 5px;
+  color: #8e8e8e;
+}
+.util .lang__lst {
+  display: none;
+}
+.util .search {
+  transform: scaleX(-1);
+}
+.util .search::before {
+  content: "\f002";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 3.8rem;
+}
+.util .all-menu::before {
+  content: "\f0c9";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 3.8rem;
 }
 
 :root {
