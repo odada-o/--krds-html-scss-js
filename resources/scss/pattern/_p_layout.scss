@@ -209,8 +209,8 @@
   display: flex;
   gap: 15px;
   .lang {
+    position: relative;
     &__btn {
-      position: relative;
       height: 57px;
       margin-right: 10px;
       font-size: 2rem;
@@ -223,7 +223,21 @@
       }
     }
     &__lst {
-      display: none;
+      // display: none;
+      position: absolute;
+      top: 52px;
+      left: 0;
+      width: 90%;
+      border: 1px solid $gray-40;
+      background: $white;
+      text-align: center;
+      li {
+        padding: 5px 0;
+        text-transform: uppercase;
+        &:first-child {
+          border-bottom: 1px solid $gray-40;
+        }
+      }
     }
   }
   .search {

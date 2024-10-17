@@ -3703,8 +3703,10 @@ input[type=checkbox] {
   display: flex;
   gap: 15px;
 }
-.util .lang__btn {
+.util .lang {
   position: relative;
+}
+.util .lang__btn {
   height: 57px;
   margin-right: 10px;
   font-size: 2rem;
@@ -3718,7 +3720,20 @@ input[type=checkbox] {
   color: #8e8e8e;
 }
 .util .lang__lst {
-  display: none;
+  position: absolute;
+  top: 52px;
+  left: 0;
+  width: 90%;
+  border: 1px solid #c6c6c6;
+  background: #fff;
+  text-align: center;
+}
+.util .lang__lst li {
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+.util .lang__lst li:first-child {
+  border-bottom: 1px solid #c6c6c6;
 }
 .util .search {
   transform: scaleX(-1);
