@@ -88,6 +88,15 @@
   // left: 0;
   // right: 0;
   z-index: 1000;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 102px;
+    left: 0;
+    right: 0;
+    height: 218px;
+    background: $gray-5;
+  }
   .inner {
     display: flex;
     justify-content: space-between;
@@ -113,6 +122,14 @@
     display: flex;
     > li {
       position: relative;
+      &:hover {
+        > a > span {
+          color: $primary;
+          &::after {
+            width: 100%;
+          }
+        }
+      }
       &:first-child {
         .gnb__depth2 {
           &::before {
@@ -122,7 +139,7 @@
             left: 0;
             width: 1px;
             height: 100%;
-            background: $gray-40;
+            background: $gray-20;
           }
         }
       }
@@ -133,8 +150,24 @@
         height: 102px;
         padding: 0 50px;
         font-size: 2rem;
-        font-weight: bold;
-        background: lightblue;
+        font-weight: $font-bold;
+        span {
+          position: relative;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 5px;
+            background: $primary;
+            transition: all 0.3s;
+          }
+        }
       }
     }
   }
@@ -145,7 +178,7 @@
     left: 0;
     right: 0;
     padding: 30px 0;
-    background: $white;
+    background: $gray-5;
     &::after {
       content: "";
       position: absolute;
@@ -153,7 +186,7 @@
       right: 0;
       width: 1px;
       height: 100%;
-      background: $gray-40;
+      background: $gray-20;
     }
     a {
       display: block;
