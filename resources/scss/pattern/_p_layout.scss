@@ -84,12 +84,18 @@
 // header
 #header {
   position: relative;
-  // top: 0;
-  // left: 0;
-  // right: 0;
   z-index: 1000;
+  &.active {
+    &::before {
+      display: block;
+    }
+    .gnb__depth2 {
+      display: block;
+    }
+  }
   &::before {
     content: "";
+    display: none;
     position: absolute;
     top: 102px;
     left: 0;
@@ -103,12 +109,12 @@
     align-items: center;
     max-width: none;
   }
-  .logo {
+  #logo {
     a {
       display: block;
-      width: 306px;
-      height: 54px;
-      background: url("../../../resources/images/pattern/common/head_logo.png") no-repeat 0 0;
+      width: 296px;
+      height: 44px;
+      background: url("../../../resources/images/pattern/common/head_logo.png") no-repeat 0 0 / contain;
     }
     span {
       @include sr-only;
@@ -163,7 +169,7 @@
             left: 50%;
             transform: translateX(-50%);
             width: 0;
-            height: 5px;
+            height: 2px;
             background: $primary;
             transition: all 0.3s;
           }
@@ -172,7 +178,7 @@
     }
   }
   &__depth2 {
-    // display: none;
+    display: none;
     position: absolute;
     top: 102px;
     left: 0;
@@ -193,6 +199,10 @@
       padding: 7px 0;
       text-align: center;
       color: $gray-70;
+      &:hover {
+        font-weight: $font-bold;
+        color: $gray-90;
+      }
     }
   }
 }
