@@ -367,28 +367,6 @@
   background-color: #1d1d1d;
 }
 
-/** fonts setting **/
-/* default - Regular */
-@font-face {
-  font-family: "Pretendard GOV";
-  font-weight: 400;
-  font-style: normal;
-  src: url("../../fonts/PretendardGOV-Regular.subset.woff") format("woff");
-}
-/* Medium */
-@font-face {
-  font-family: "Pretendard GOV";
-  font-weight: 500;
-  font-style: normal;
-  src: url("../../fonts/PretendardGOV-Medium.subset.woff") format("woff");
-}
-/* Bold */
-@font-face {
-  font-family: "Pretendard GOV";
-  font-weight: 700;
-  font-style: normal;
-  src: url("../../fonts/PretendardGOV-Bold.subset.woff") format("woff");
-}
 /* **** area mixin ****/
 /* **** text attr ****/
 /* **** scroll ****/
@@ -3706,6 +3684,14 @@ input[type=checkbox] {
 .util .lang {
   position: relative;
 }
+.util .lang.active .lang__btn::after {
+  content: "\f106";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+}
+.util .lang.active .lang__lst {
+  display: block;
+}
 .util .lang__btn {
   height: 57px;
   margin-right: 10px;
@@ -3720,6 +3706,7 @@ input[type=checkbox] {
   color: #8e8e8e;
 }
 .util .lang__lst {
+  display: none;
   position: absolute;
   top: 52px;
   left: 0;

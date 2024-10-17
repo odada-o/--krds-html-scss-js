@@ -210,6 +210,15 @@
   gap: 15px;
   .lang {
     position: relative;
+    &.active {
+      .lang__btn::after {
+        content: "\f106";
+        @include lineAwesome;
+      }
+      .lang__lst {
+        display: block;
+      }
+    }
     &__btn {
       height: 57px;
       margin-right: 10px;
@@ -223,7 +232,7 @@
       }
     }
     &__lst {
-      // display: none;
+      display: none;
       position: absolute;
       top: 52px;
       left: 0;
