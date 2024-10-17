@@ -3515,8 +3515,13 @@ input[type=checkbox] {
   gap: 10px;
   position: absolute;
   top: 17px;
-  right: 30px;
+  right: 20px;
   font-size: 2rem;
+}
+@media (min-width: 600px) {
+  .sec-g__more {
+    right: 30px;
+  }
 }
 .sec-g__more::after {
   content: "\f061";
@@ -3586,6 +3591,10 @@ input[type=checkbox] {
 .slide-intro .swiper-slide {
   position: relative;
 }
+.slide-intro .swiper-slide.swiper-slide-active .text-area {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
 .slide-intro .swiper-slide img {
   -o-object-position: 50% 100%;
      object-position: 50% 100%;
@@ -3594,9 +3603,11 @@ input[type=checkbox] {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
   width: 70%;
   max-width: 400px;
+  opacity: 0;
+  transition: all 0.5s;
 }
 .slide-intro .swiper-slide .text-area__tit {
   font-size: 3rem;

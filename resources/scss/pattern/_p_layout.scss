@@ -28,8 +28,11 @@
     gap: 10px;
     position: absolute;
     top: 17px;
-    right: 30px;
+    right: $p-mobile;
     font-size: 2rem;
+    @include mobileMore {
+      right: $p-tablet;
+    }
     &::after {
       content: "\f061";
       font-family: "Line Awesome Free";
