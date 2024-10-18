@@ -3579,6 +3579,7 @@ input[type=checkbox] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: none;
   height: 73px;
 }
 @media (min-width: 1024px) {

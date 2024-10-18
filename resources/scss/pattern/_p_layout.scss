@@ -106,6 +106,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: none;
     height: 73px;
     @include tabletMore {
       height: auto;
