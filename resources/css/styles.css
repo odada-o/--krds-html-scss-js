@@ -3515,10 +3515,10 @@ input[type=checkbox] {
   text-align: center;
 }
 #skip-nav.type1 {
-  background-color: var(--krds-white);
+  background-color: #fff;
 }
 #skip-nav.type1 a:focus {
-  color: var(--krds-gray-90);
+  color: #1d1d1d;
 }
 
 .sec-g {
@@ -3613,28 +3613,28 @@ input[type=checkbox] {
   border: 0 !important;
 }
 
-#gnb {
+.gnb {
   display: none;
   position: relative;
 }
 @media (min-width: 1024px) {
-  #gnb {
+  .gnb {
     display: block;
   }
 }
-#gnb .gnb__depth1 {
+.gnb .gnb__depth1 {
   display: flex;
 }
-#gnb .gnb__depth1 > li {
+.gnb .gnb__depth1 > li {
   position: relative;
 }
-#gnb .gnb__depth1 > li:hover > a > span {
+.gnb .gnb__depth1 > li:hover > a > span {
   color: #246beb;
 }
-#gnb .gnb__depth1 > li:hover > a > span::after {
+.gnb .gnb__depth1 > li:hover > a > span::after {
   width: 100%;
 }
-#gnb .gnb__depth1 > li:first-child .gnb__depth2::before {
+.gnb .gnb__depth1 > li:first-child .gnb__depth2::before {
   content: "";
   position: absolute;
   top: 0;
@@ -3643,7 +3643,7 @@ input[type=checkbox] {
   height: 100%;
   background: #e4e4e4;
 }
-#gnb .gnb__depth1 > li > a {
+.gnb .gnb__depth1 > li > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3652,13 +3652,13 @@ input[type=checkbox] {
   font-size: 2rem;
   font-weight: 700;
 }
-#gnb .gnb__depth1 > li > a span {
+.gnb .gnb__depth1 > li > a span {
   position: relative;
   display: flex;
   align-items: center;
   height: 100%;
 }
-#gnb .gnb__depth1 > li > a span::after {
+.gnb .gnb__depth1 > li > a span::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -3669,7 +3669,7 @@ input[type=checkbox] {
   background: #246beb;
   transition: all 0.3s;
 }
-#gnb .gnb__depth2 {
+.gnb .gnb__depth2 {
   display: none;
   position: absolute;
   top: 102px;
@@ -3678,7 +3678,7 @@ input[type=checkbox] {
   padding: 30px 0;
   background: #f8f8f8;
 }
-#gnb .gnb__depth2::after {
+.gnb .gnb__depth2::after {
   content: "";
   position: absolute;
   top: 0;
@@ -3687,13 +3687,13 @@ input[type=checkbox] {
   height: 100%;
   background: #e4e4e4;
 }
-#gnb .gnb__depth2 a {
+.gnb .gnb__depth2 a {
   display: block;
   padding: 7px 0;
   text-align: center;
   color: #555555;
 }
-#gnb .gnb__depth2 a:hover {
+.gnb .gnb__depth2 a:hover {
   font-weight: 700;
   color: #1d1d1d;
 }
@@ -3766,16 +3766,20 @@ input[type=checkbox] {
 }
 
 #nav-all {
-  display: none;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 100%;
   width: 100%;
   height: 100%;
   padding: 20px;
   background: rgba(255, 255, 255, 0.9);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  transition: all 0.3s;
+}
+#nav-all.active {
+  display: block;
+  left: 0;
 }
 
 :root {
@@ -3849,6 +3853,8 @@ input[type=checkbox] {
 .slide-intro .swiper-slide .text-area__tit {
   font-size: 3rem;
   color: #1d1d1d;
+  font-family: "GmarketSansMedium";
+  font-weight: 500;
 }
 .slide-intro .swiper-slide .text-area__cont {
   color: #555555;
