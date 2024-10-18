@@ -3522,6 +3522,7 @@ input[type=checkbox] {
 }
 
 .sec-g {
+  overflow: hidden;
   padding: 10vw 0;
 }
 .sec-g__tit {
