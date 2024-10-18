@@ -3561,20 +3561,21 @@ input[type=checkbox] {
   z-index: 1000;
 }
 #header.active::before {
-  display: block;
+  height: 218px;
 }
 #header.active .gnb__depth2 {
-  display: block;
+  height: 218px;
+  padding: 30px 0;
 }
 #header::before {
   content: "";
-  display: none;
   position: absolute;
   top: 102px;
   left: 0;
   right: 0;
-  height: 218px;
+  height: 0;
   background: #f8f8f8;
+  transition: all 0.3s;
 }
 #header .inner {
   display: flex;
@@ -3615,28 +3616,28 @@ input[type=checkbox] {
   border: 0 !important;
 }
 
-.gnb {
+#gnb {
   display: none;
   position: relative;
 }
 @media (min-width: 1024px) {
-  .gnb {
+  #gnb {
     display: block;
   }
 }
-.gnb .gnb__depth1 {
+#gnb .gnb__depth1 {
   display: flex;
 }
-.gnb .gnb__depth1 > li {
+#gnb .gnb__depth1 > li {
   position: relative;
 }
-.gnb .gnb__depth1 > li:hover > a > span {
+#gnb .gnb__depth1 > li:hover > a > span {
   color: #246beb;
 }
-.gnb .gnb__depth1 > li:hover > a > span::after {
+#gnb .gnb__depth1 > li:hover > a > span::after {
   width: 100%;
 }
-.gnb .gnb__depth1 > li:first-child .gnb__depth2::before {
+#gnb .gnb__depth1 > li:first-child .gnb__depth2::before {
   content: "";
   position: absolute;
   top: 0;
@@ -3645,7 +3646,7 @@ input[type=checkbox] {
   height: 100%;
   background: #e4e4e4;
 }
-.gnb .gnb__depth1 > li > a {
+#gnb .gnb__depth1 > li > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3654,13 +3655,13 @@ input[type=checkbox] {
   font-size: 2rem;
   font-weight: 700;
 }
-.gnb .gnb__depth1 > li > a span {
+#gnb .gnb__depth1 > li > a span {
   position: relative;
   display: flex;
   align-items: center;
   height: 100%;
 }
-.gnb .gnb__depth1 > li > a span::after {
+#gnb .gnb__depth1 > li > a span::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -3671,16 +3672,18 @@ input[type=checkbox] {
   background: #246beb;
   transition: all 0.3s;
 }
-.gnb .gnb__depth2 {
-  display: none;
+#gnb .gnb__depth2 {
+  overflow: hidden;
   position: absolute;
   top: 102px;
   left: 0;
   right: 0;
-  padding: 30px 0;
+  height: 0;
+  padding: 0;
   background: #f8f8f8;
+  transition: all 0.3s;
 }
-.gnb .gnb__depth2::after {
+#gnb .gnb__depth2::after {
   content: "";
   position: absolute;
   top: 0;
@@ -3689,13 +3692,13 @@ input[type=checkbox] {
   height: 100%;
   background: #e4e4e4;
 }
-.gnb .gnb__depth2 a {
+#gnb .gnb__depth2 a {
   display: block;
   padding: 7px 0;
   text-align: center;
   color: #555555;
 }
-.gnb .gnb__depth2 a:hover {
+#gnb .gnb__depth2 a:hover {
   font-weight: 700;
   color: #1d1d1d;
 }
